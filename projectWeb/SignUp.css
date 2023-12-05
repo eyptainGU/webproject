@@ -1,0 +1,84 @@
+*{
+    font-family: "Poppins", sans-serif;
+    transition: 0.4s;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('back.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.signuppage{
+    width: 400px;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(wallpapersden.com_planet-4k-green-glow_1366x768.jpg);
+    padding: 20px;
+}
+.head1 {
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+}
+.input {
+    margin: 10px 0;
+}
+label {
+    display:black;
+    font-weight: bold;
+    
+}
+input[type="text"]{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;    
+}
+input::placeholder {
+text-align: center;
+}
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff
+}
+button {
+    background-color: rgba(255, 116, 2, 0.87);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    text-align: center;
+    transition: 0.7s ease;
+    margin-left: 35px;   
+}
+button:hover{
+    scale: 1.08;
+    background-color:#ba6708;
+}
+.return a{
+    text-decoration: none;
+    color: rgb(231, 230, 226);
+}
+.return{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.return a:hover{
+    color: #d6750e;
+}

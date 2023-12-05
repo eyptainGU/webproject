@@ -1,0 +1,177 @@
+<span style="font-family: verdana, geneva, sans-serif;">
+    <!DOCTYPE html>
+    <html lang="en">
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Pure Gym</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome Iocns cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    </head>
+
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo">
+                <i class="fas fa-dumbbell"></i>Pure Gym
+            </a>
+            <span id="timer"></span>
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <span class="header__span">
+
+                    <a href="Coaches.html">Coaches</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#About">About</a>
+                    <a href="Membership.html">Membership</a>
+                </span>
+                <a href="#">|</a>
+                <a href="login.html">Login</a>
+                <a href="Signup.html" class="btn">Sign Up</a>
+            </nav>
+        </header>
+
+        <section class="home">
+            <div class="max-width">
+                <div class="home-content">
+                    <h3>help for ideal <br> body fitness</h3>
+                    <a href="Membership.html"><button class="btn">Get started</button></a>
+                    <a href="Coaches.html"><button class="btn">Check coaches</button></a>
+                </div>
+                <div class="home-image">
+                    <img src="peakpx (1).jpg" alt="" id="image">
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service">
+                    <h3>Personal Training</h3>
+                    <p>Get personalized training sessions with our certified trainers to achieve your fitness goals.</p>
+                </div>
+                <div class="service">
+                    <h3>Group Classes</h3>
+                    <p>Join our group fitness classes including yoga, HIIT, and more led by experienced instructors.</p>
+                </div>
+                <div class="service">
+                    <h3>Cardio Equipment</h3>
+                    <p>Access to a wide range of cardio machines for improving cardiovascular health and endurance.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="About" class="contact">
+            <div class="max-width">
+                <h2>About Us</h2>
+                <div class="contact-content">
+                    <br>
+                    <p>Pure Gym International, Inc. is an American chain of international co-ed fitness centers
+                        (commonly referred to as gyms) originally started by Us in Venice Beach, California. Each gym
+                        offers a variety of cardio and strength training equipment as well as group exercise programs.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="max-width">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <br>
+                    <p>If you have any questions or inquiries, feel free to get in touch with us.<br> -<a
+                            href="#">PureGym@gmail.com</a></p>
+
+                </div>
+            </div>
+        </section>
+        <script>
+            let res;
+            var d = new Date()
+            var min = d.getMinutes();
+            var hours = d.getHours();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            var sec = d.getSeconds();
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+
+            hours = hours > 9 ? hours : "0" + hours
+            min = min > 9 ? min : "0" + min
+            sec = sec > 9 ? sec : "0" + sec
+            res = hours + ':' + min + ":" + sec + ' ' + ampm;
+
+            document.getElementById("timer").innerText = res
+            setInterval(() => {
+                let res;
+                var d = new Date()
+                var min = d.getMinutes();
+                var hours = d.getHours();
+                var ampm = hours >= 12 ? 'PM' : 'AM';
+                var sec = d.getSeconds();
+                hours = hours % 12;
+                hours = hours ? hours : 12;
+
+                // image veiwer switching logic
+                next();
+
+                hours = hours > 9 ? hours : "0" + hours
+                min = min > 9 ? min : "0" + min
+                sec = sec > 9 ? sec : "0" + sec
+                res = hours + ':' + min + ":" + sec + ' ' + ampm;
+
+                document.getElementById("timer").innerText = res
+
+
+
+            }, 1000);
+
+
+            let images = [
+                'gym-og6h4kg6ciwvrj5i.jpg',
+                'fitness-gym-and-equipment-photography-dn9w2z4r8yd2wi47.webp',
+                'barbell-on-gym-floor-ng7jof2zvzm5o47y.webp',
+                'peakpx (1).jpg',
+            ]
+
+            const img = document.getElementById("image")
+            let imageSwtich = 0
+
+            function back() {
+
+                if (imageSwtich - 1 < 0) {
+                    imageSwtich = images.length - 1
+                } else {
+                    imageSwtich = parseInt(imageSwtich) - 1
+                }
+                img.src = images[(parseInt(imageSwtich) % images.length)]
+                console.log(imageSwtich);
+
+            }
+            function next() {
+
+
+
+                imageSwtich = parseInt(imageSwtich) + 1
+                img.src = images[(parseInt(imageSwtich) % images.length)]
+                console.log(imageSwtich);
+            }
+
+
+
+
+        </script>
+    </body>
+
+    </html>
+</span>
